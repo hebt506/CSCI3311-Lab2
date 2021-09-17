@@ -1,5 +1,15 @@
 // TODO: load the dataset 
+var attractions;
 
+fetch('/attractions.json')
+  .then(response => response.json())
+  .then(data => {
+    attractions = data;
+	console.log(attractions);
+	});
+
+// console.log(attractions);
+    
 function filterData(category) {
 
 	/* **************************************************
@@ -15,6 +25,8 @@ function filterData(category) {
 	 * - the max. length of 'data' is 5
 	 *
 	 * **************************************************/
+    
+
 
 }
 

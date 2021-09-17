@@ -32,3 +32,4 @@ function filterData(category) {
 
 // TODO: Define an event listener for the dropdown menu
 //       Call filterData with the selected category
+

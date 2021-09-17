@@ -47,11 +47,13 @@ body {
   /****************/
   
   .bar {
-    fill: #3C948B;
+    /* fill: #3C948B; */
+    fill:rgb(157, 29, 231);
   }
   
   .bar:hover {
-    fill: #327972;
+    /* fill: #327972; */
+    fill:rgb(88, 0, 146);
   }
   
   .axis {

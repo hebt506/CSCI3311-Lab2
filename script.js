@@ -25,7 +25,7 @@ function filterData(category) {
 	 * - the max. length of 'data' is 5
 	 *
 	 * **************************************************/
-    
+    // console.log(attractions)
 
 
 }

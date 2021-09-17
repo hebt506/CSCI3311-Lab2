@@ -8,10 +8,12 @@ let attractions;
 // 	});
 
 async function loadData() {
+
 	let response = await fetch('/attractions.json');
 	let data = await response.json().catch();
 	// console.log(data)
 	return data;
+	
 }
     
 function filterData(category) {
@@ -33,18 +35,24 @@ function filterData(category) {
 	var attraction_cat;
 
 	if (!category || category === 'all') {
+
 		attraction_cat = attractions;
 		// console.log(attraction_cat)
+
 	} else {
+
 		attraction_cat = attractions.filter(d => d.Category === category)
 		// console.log(attraction_cat)
+
 	}
 
 	function transform(amount) {
+
 		filtered = amount.sort((a,b)=>b.Visitors-a.Visitors);
 		filtered = filtered.slice(0,5);
 		// console.log(filtered)
 		return filtered;
+
 	}
 
 	renderBarChart(transform(attraction_cat))
@@ -58,6 +66,7 @@ function filterData(category) {
 // renderBarChart(top5)
 
 async function main(){
+
 	attractions = await loadData();
 	// console.log(attractions)
 	filterData();
@@ -67,6 +76,7 @@ async function main(){
     // console.log('Current event.target.value is: ', event.target.value);
    		filterData(event.target.value);
 	});	
+
 }
 
 main()

@@ -9,7 +9,7 @@ let attractions;
 
 async function loadData() {
 
-	let response = await fetch('/attractions.json');
+	let response = await fetch('attractions.json');
 	let data = await response.json().catch();
 	// console.log(data)
 	return data;
